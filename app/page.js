@@ -1,14 +1,21 @@
 import React from "react";
 import Link from 'next/link';
-import Head from 'next/head';
 
 export default function Page() {
   return (
-    <main>
-      <h1 className="text-4xl font-bold text-center mb-10 ">Web Development Week 2 Assignment</h1>
-      <div className="flex justify-center space-x-2">
-       <Link href="/" className="text-purple-400 hover:underline">Home</Link>
-       <Link href="/week2" className="text-purple-400 hover:underline ">Week 2</Link>
+    <main className="flex flex-col items-center mt-20 space-y-4">
+
+      <h1 className="text-4xl font-mono mb-4">CPRG 306: Web Development 2 - Assignment</h1>
+
+      <div className="flex space-x-4 mb-8">
+        <Link href="/" className="text-purple-400 hover:underline font-mono text-xl">Home</Link>
+        <Link href="/week2" className="text-purple-400 hover:underline font-mono text-xl">Week 2</Link>
+      </div>
+
+      <div className="w-full max-w-screen-md">
+        <p className="font-mono text-lg">Name: Tamara Mahmoud</p>
+        <p className="font-mono text-lg">Course Section: CPRG 306 A</p>
+        <Link className="text-purple-400 font-mono text-lg hover:underline" href="https://github.com/TamaraMah/cprg306-assignments">https://github.com/TamaraMah/cprg306-assignments</Link>
       </div>
     </main>
   )
