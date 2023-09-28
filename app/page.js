@@ -10,6 +10,7 @@ export default function Page() {
       <div className="flex space-x-4 mb-8">
         <Link href="/" className="text-purple-400 hover:underline font-mono text-xl">Home</Link>
         <Link href="/week2" className="text-purple-400 hover:underline font-mono text-xl">Week 2</Link>
+        <Link href="/week3" className="text-purple-400 hover:underline font-mono text-xl">Week 3</Link>
       </div>
 
       <div className="w-full max-w-screen-md">
