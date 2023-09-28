@@ -3,6 +3,11 @@ import Link from 'next/link';
 
 export default function Page() {
     return(
-    <h1>hello</h1>
+        <div>
+        <h1>Shopping List</h1>
+        <div>
+
+        </div>
+        </div>
     )
 }  
