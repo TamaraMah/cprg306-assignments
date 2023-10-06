@@ -18,7 +18,7 @@ const NewItem = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-10 p-5 rounded shadow">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-10 p-5 rounded shadow bg-rose-200">
       <div className="mb-4">
         <label className="block text-purple-500 text-sm font-bold mb-2">Item Name</label>
         <input 
