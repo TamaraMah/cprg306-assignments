@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Item = ({name, quantity, category}) => (
-    <li>{name}, {quantity}, {category}</li>
-);
+export function Item({name, quantity, category}) {
+    return(
+        <div className="flex flex-col">
+            <p className="font-mono text-lg font-bold text-xl">{name}</p>
+            <p className="font-mono text-lg">{quantity}</p>
+            <p className="font-mono text-lg">{category}</p>
+        </div>
+    );
+}
 
 export default Item;
