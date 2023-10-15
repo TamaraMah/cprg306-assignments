@@ -17,9 +17,9 @@ const NewItem = ({ onAddItem }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-10 p-5 rounded shadow bg-rose-200">
+    <form onSubmit={handleSubmit} className="max-w-lg ml-10 p-5 rounded shadow">
       <div className="mb-4">
-        <label className="block text-purple-500 text-sm font-bold mb-2">Item Name</label>
+        <label className="block text-red-300 text-sm font-bold mb-2">Item Name</label>
         <input 
           type="text" 
           value={name} 
@@ -30,7 +30,7 @@ const NewItem = ({ onAddItem }) => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-purple-500 text-sm font-bold mb-2">Quantity</label>
+        <label className="block text-red-300 text-sm font-bold mb-2">Quantity</label>
         <input 
           type="number" 
           value={quantity} 
@@ -42,7 +42,7 @@ const NewItem = ({ onAddItem }) => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-purple-500 text-sm font-bold mb-2">Category</label>
+        <label className="block text-red-300 text-sm font-bold mb-2">Category</label>
         <select 
           value={category} 
           onChange={(e) => setCategory(e.target.value)} 
@@ -50,7 +50,7 @@ const NewItem = ({ onAddItem }) => {
         </select>
       </div>
 
-      <button type="submit" className="bg-pink-400 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Add Item</button>
+      <button type="submit" className="bg-rose-400 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Add Item</button>
     </form>
   );
 };
