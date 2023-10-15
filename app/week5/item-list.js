@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import itemsJson from './items.json';
+import Item from './item';
 
-const ItemList = () => {
-    const [items, setItems] = useState(itemsJson);
-    const [sortBy, setSortBy] = useState('name');
+const ItemList = ({sortBy}) => {
+    const [sortedItems, setSortedItems] = useState([]);
 
-    const sortedItems = [...items].sort((a, b) => {
-        if (sortBy === 'name') {
-            return a.name.localeCompare(b.name);
-        } else if (sortBy === 'category') {
-            return a.category.localeCompare(b.category);
-        }
-        return 0;
-    });
+    useEffect(() => {
+        const sorted = [...itemsJson].sort((a, b) => {
+            if (sortBy === 'name') {
+                return a.name.localeCompare(b.name);
+            } else if (sortBy === 'category') {
+                return a.category.localeCompare(b.category);
+            }
+            return 0;
+        });
+        setSortedItems(sorted);
+    }, [sortBy]);
 
-    return { sortedItems, setSortBy };
+    return (
+        <div className="grid grid-cols-2 p-6 m-6 mt-0">
+        {sortedItems.map((item, index) => (
+            <div key={index} style={{border: '1px solid purple', padding: '10px', margin: '10px'}}>
+                <Item 
+                    name={item.name} 
+                    quantity={item.quantity} 
+                    category={item.category} 
+                />
+            </div>
+        ))}
+        </div>
+    );
 }
 
 export default ItemList;
